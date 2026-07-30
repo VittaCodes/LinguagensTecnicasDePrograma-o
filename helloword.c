@@ -1,6 +1,6 @@
 #include <studio.b>
 int main()
 { 
-print("hello word "\n");
+print("hello word\n");
   return 0;
 }
