@@ -3,7 +3,7 @@
 
 int main (int argc, char *argv[]) {
 	
-	int primeiro, segundo, aux;
+	/*int primeiro, segundo, aux;
 	
 	printf("Digite o primeir Valor");
 	scanf("%d", &primeiro);
@@ -14,14 +14,14 @@ int main (int argc, char *argv[]) {
 	primeiro = segundo;
 	segundo = aux;
 		
-	printf("seus resultados foram: %d, %d",primeiro, segundo );
+	printf("seus resultados foram: %d, %d",primeiro, segundo );*/
 	
 	
 	
 	double valor;
 	
 	printf("\n escreva o valor com ponto");
-	scanf("%lf", valor);
+	scanf("%lf",&valor);
 	
 	printf("valor em notacao cientifica = %e\n", valor);
 	
