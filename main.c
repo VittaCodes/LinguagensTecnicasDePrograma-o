@@ -1,53 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int n;
-	printf("entre com o numero: ");
-	scanf("%d", &n);
 	
-	if(n<10 && n>0){
-		
-		if(n==1 || n==2 || n==3 || n==5 || n==7){
-			printf("o dobro de %d = %d", n, (n*2));
-		}else if(n%2 == 0){
-			printf("%d+2 = %d", n, n+2);
-			}else{
-			printf("||%d|%d|", n-1, n, n+1);
-		}
-			} else printf("_out_of_range");
+	float imc, peso, altura;
 	
+	printf("Escreva seu peso: ");
+	scanf("%f", &peso);
 	
-char op;
-scanf("%c", &op);
-switch(op){
+	printf("Escreva sua altura: ");
+	scanf("%f", &altura);
 	
-
-case 'a': printf("opa ta falando com ele"); break;
-
-case 'b': printf("Benedito"); break;
-
-case 'c': printf("É complicada a situação"); break;
-
-case 'd': printf("Tamo Junto"); break;
-}
-
-
-
-char letra;
-scanf("%c", &op);
-switch(op){
-
-
-
-
-
-
+	imc = peso / (altura * altura);
+	
+	printf("\nSeu IMC e: %.2f\n", imc);
+	
+	if (imc < 18.5) {
+		printf("Status: ABAIXO DO PESO\n");
+	} 
+	else if (imc >= 18.5 && imc <= 24.9) {
+		printf("Status: PESO NORMAL\n");
+	}
+	else if (imc >= 25.0 && imc <= 29.9) {
+		printf("Status: ACIMA DO PESO\n");
+	}	
+	else if (imc >= 30.0) {
+		printf("Status: OBESIDADE\n");
+	}
+	
 	return 0;
 }
-
 
 
