@@ -1,25 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-	
-	int comp_maior (int a, int b){
-    if(a>b)return a;
-    else return b;
+int compara(int a, int b) {
+    if (a > b)
+        return a;
+    else
+        return b;
 }
+
 int main(int argc, char *argv[]) {
-    int valor[10];
-    int i;
+    int valores[10];
+    int maior, i;
 
-    printf("Leia os numeros");
-    // PARA ( INICIAL, CONDIÇÃO, INCREMENTO)
-    for(i=0; i<10; i++){
-        scanf("%d",&valor[i]);
-    }
-    for(i=9; i>0; i--){
-        printf("|%d|",valor[i]);
+    printf("Vamos ler os valores:\n");
+
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &valores[i]);
     }
 
+    maior = valores[0];
 
-	return 0;
+    for (i = 0; i < 10; i++) {
+        maior = compara(maior, valores[i]);
+    }
+
+    printf("O maior valor e: %d\n", maior);
+
+    return 0;
 }
