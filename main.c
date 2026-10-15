@@ -1,30 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int compara(int a, int b) {
-    if (a > b)
-        return a;
-    else
-        return b;
-}
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-    int valores[10];
-    int maior, i;
-
-    printf("Vamos ler os valores:\n");
-
-    for (i = 0; i < 10; i++) {
-        scanf("%d", &valores[i]);
-    }
-
-    maior = valores[0];
-
-    for (i = 0; i < 10; i++) {
-        maior = compara(maior, valores[i]);
-    }
-
-    printf("O maior valor e: %d\n", maior);
-
-    return 0;
+	
+	int i,n,s;
+	
+	while (i<10){
+		scanf("%d", &n);
+		if(n>0){
+			s +=n;
+			i++;
+		}
+	}
+	printf("%d | %d", s, s/10 );
+	
+	return 0;
 }
